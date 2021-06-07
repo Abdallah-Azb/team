@@ -47,7 +47,7 @@ class _HealthScreenState extends State<HealthScreen> {
             CustomButton(
               text: "الوزن المثالي",
               onTap: (){
-                double w =double.parse( _weight.text.toString());
+                // double w =double.parse( _weight.text.toString());
                 double h =double.parse( _height.text.toString());
                 setState(() {
                   PW = h - 100.0 ;
@@ -57,6 +57,7 @@ class _HealthScreenState extends State<HealthScreen> {
               }
 
             ),
+            PW == null ?Container() :
             Text(PW.toString(),style: TextStyle(fontSize: 25,color: Colors.purple),)
           ],
         )
